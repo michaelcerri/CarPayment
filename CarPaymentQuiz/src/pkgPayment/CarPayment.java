@@ -44,12 +44,13 @@ public class CarPayment {
 		this.interestRate = interestRate;
 	}
 	
-	//methods, interest rate compounded monthly using C=cC*(iR*(1+iR)^lL)/((1+iR)^lL-1)
+	//methods, interest rate compounded yearly using MonthlyPayment=cC*(iR/12*(1+iR/12)^lL)/((1+iR/12)^lL-1)
 	
 	public double monthlyCarPayment() {
 		return (carCost*(interestRate/12*Math.pow(1+interestRate/12, loanLength))/(Math.pow(1+interestRate/12, loanLength)-1));
 	}
 	
+	//total cost - car cost = interest
 	public double interestCost() {
 		return monthlyCarPayment()*loanLength-carCost;
 	}

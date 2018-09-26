@@ -11,7 +11,7 @@ public class CarPaymentTest {
 	@Test
 	public void monthlyCarPaymentTest(){
 		CarPayment cp=new CarPayment(35000,0,60,.10);
-		assertEquals(743.65,cp.monthlyCarPayment(),.01);	
+		assertEquals(743.65,cp.monthlyCarPayment(),.01); //expected, actual, allowed difference (double values)	
 	}
 	//test interest cost
 	@Test
